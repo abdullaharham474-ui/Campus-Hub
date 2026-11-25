@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ title }} | Smart Campus</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+<nav class="nav"><a class="brand" href="{{ url_for('home') }}"><span class="brand-icon">SC</span><span>SMART CAMPUS</span></a>
+<div class="navlinks"><a href="{{ url_for('home') }}">Home</a>
+{% if session.get('user_id') %}<a href="{{ url_for('dashboard') }}">Dashboard</a><a href="{{ url_for('logout') }}">Logout</a>
+{% else %}<a href="{{ url_for('login') }}">Login</a><a href="{{ url_for('register') }}">Register</a>{% endif %}</div></nav>
+<main class="container">
+{% for category,message in get_flashed_messages(with_categories=true) %}<div class="flash {{ category }}">{{ message }}</div>{% endfor %}
+{% block content %}{% endblock %}
+</main><footer>SMART CAMPUS · College Management Portal</footer></body></html>

@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block content %}
+<section class="hero"><span class="eyebrow">Connected learning · Simplified management</span>
+<h1>Your college, connected in one smart platform.</h1><p>Smart Campus brings student access, attendance records, academic results and campus announcements into one simple portal.</p>
+<div class="actions"><a class="btn" href="{{ url_for('register') }}">Create student account →</a><a class="btn secondary" href="{{ url_for('login') }}">Sign in</a></div></section>
+<div class="section-head"><h2>Campus tools</h2><span class="muted">Everything in one place</span></div>
+<div class="grid"><article class="card"><h3>Student Portal</h3><p class="muted">Access your student dashboard and academic information.</p></article>
+<article class="card"><h3>Attendance</h3><p class="muted">Review your attendance dates and status.</p></article>
+<article class="card"><h3>Examination Results</h3><p class="muted">View marks and subject-wise percentage.</p></article>
+<article class="card"><h3>Campus Notices</h3><p class="muted">Stay informed about announcements.</p></article></div>{% endblock %}
